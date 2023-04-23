@@ -1,7 +1,7 @@
 import base64, zlib, time, os
 
 while True:
-    print("|| Please enter path to file")
+    print("|| Please enter path to the file")
     path = input("/> ")
     if path == "" or len(path)<4:
         print("You're entered incorrect path!")
