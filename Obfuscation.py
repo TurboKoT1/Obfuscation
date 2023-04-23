@@ -6,17 +6,17 @@ while True:
     if path == "" or len(path)<4:
         print("You're entered incorrect path!")
     elif not path.endswith(".py"):
-        print("File is should to be py!")
+        print("File should ends with .py!")
     elif not os.path.exists(path):
         print("File not found!")
     else:
         start_time = time.time()
-        print("[INFO] * Getting file name..")
+        print("[INFO] * Getting the file name..")
         filename = path.split("/")[-1].split(".")[0]
 
-        print("[INFO] * Getting file code..")
+        print("[INFO] * Getting the file code..")
         code = open(path, 'r', encoding='utf-8').read()
-        print("[INFO] * Encoding file code..")
+        print("[INFO] * Encoding the file code..")
         encoded_code = base64.b85encode(code.encode("utf-8"))
         print("[INFO] * Compressing encoded file code..")
         compress = zlib.compress(encoded_code)
